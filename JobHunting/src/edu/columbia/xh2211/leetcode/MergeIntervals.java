@@ -9,6 +9,8 @@ public class MergeIntervals {
 //	For example,
 //	Given [1,3],[2,6],[8,10],[15,18],
 //	return [1,6],[8,10],[15,18].
+	
+	//N^2 solution, not so good.
 	 public class Interval {
 		 int start;
 		 int end;
@@ -18,7 +20,7 @@ public class MergeIntervals {
     public List<Interval> merge(List<Interval> intervals) {
         List<Interval> result=new ArrayList<Interval>();
         boolean nocommon = true;
-        for(int i = 0; i < intervals.size(); ++i){
+        for(int i = 0; i < intervals.size(); ++i){//require that this intervals are in a increasing order? No.
         	Interval cur = intervals.get(i);
         	nocommon = true;
         	for(int j = i+1; i < intervals.size(); ++j){
