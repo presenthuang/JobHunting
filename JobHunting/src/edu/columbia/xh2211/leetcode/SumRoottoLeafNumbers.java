@@ -35,30 +35,15 @@ public class SumRoottoLeafNumbers {
 	}
 
 	public int sumNumbers(TreeNode root) {
-		if (root == null)
-			return 0;
-		String init = "" + root.val;
-		return sums(root.left, init) + sums(root.right, init);
+		return sums(root, "");
 	}
 
 	public int sums(TreeNode root, String intermediate) {
-		if (root == null) {
-			if (intermediate == "") {
-				return 0;
-			} else {
-				return Integer.parseInt(intermediate);
-			}
-		}
+		if (root == null) 
+			return 0;
 		String digit = intermediate + root.val;
-		if (root.left != null && root.right != null) {
-			return sums(root.left, digit) + sums(root.right, digit);
-		}
-		if (root.left != null && root.right == null) {
-			return sums(root.left, digit);
-		}
-		if (root.left == null && root.right != null) {
-			return sums(root.right, digit);
-		}
+		if(root.left != null || root.right != null)
+		    return sums(root.left, digit) + sums(root.right, digit);
 		return Integer.parseInt(digit);
 	}
 }

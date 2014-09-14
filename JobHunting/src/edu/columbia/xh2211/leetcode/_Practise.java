@@ -1,5 +1,8 @@
 package edu.columbia.xh2211.leetcode;
 
+import java.util.HashMap;
+import java.util.HashSet;
+
 public class _Practise {
 	//binary search with duplicates
 	public static int search(int[] A, int target) {
@@ -33,8 +36,24 @@ public class _Practise {
 		int begin = 3;
 		int end = -4;
 		
-		System.out.println((begin & end) + ((begin ^ end) >> 1));
-		System.out.println((begin+end)/2);
+//		System.out.println((begin & end) + ((begin ^ end) >> 1));
+//		System.out.println((begin+end)/2);
+		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+		map.put(2, 5);
+		map.put(0, 2);
+		
+		HashMap<Integer, Integer> map1 = new HashMap<Integer, Integer>();
+		map1.put(0, 2);
+		map1.put(2, 5);
+		
+		HashSet<Integer> Set = new HashSet<Integer>();
+		if(Set.contains(map1)){
+			System.out.println();
+		}
+		map.equals(map1);
+//		System.out.println(map);
+//		System.out.println(map1);
+		System.out.println("231".substring(3,3));
 	}
 	
 }
