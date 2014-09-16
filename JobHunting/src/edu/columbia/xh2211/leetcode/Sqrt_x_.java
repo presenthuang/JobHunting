@@ -7,7 +7,7 @@ public class Sqrt_x_ {
     public int sqrt(int x) {
     	if(x == 0 || x == 1)
     		return x;
-    	return binarySearch(1,x,x);
+    	return binarySearch(1,x/2+1,x);
     }
     
     private int binarySearch(long left, long right, long target){
@@ -24,4 +24,17 @@ public class Sqrt_x_ {
     		return binarySearch(left,mid-1,target);
     	}
     }
+    
+    //Newton's method
+//    public int sqrt(int x) {
+//    	if (x == 0) return 0;
+//    	double last = 0;
+//    	double res = 1;
+//    	while (res != last)
+//    	{
+//    		last = res;
+//    		res = (res + x / res) / 2;
+//    	}
+//    	return (int)res;
+//    }
 }

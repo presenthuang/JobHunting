@@ -32,7 +32,51 @@ public class _Practise {
 		return -1;// when (l > r)
 	}
 	
+	
+	public int longestCommonSubsequence(String X, String Y){
+		int m = X.length();
+		int n = Y.length();
+		int[][] LCS = new int[m+1][n+1];
+		
+		int i, j;
+		
+		for(i = 1; i <= m; ++i){
+			for(j = 1; j <= n; ++j){
+				if(X.charAt(i-1) == Y.charAt(j-1)){
+					LCS[i][j] = LCS[i-1][j-1]+1;
+				}else{
+					LCS[i][j] = Math.max(LCS[i-1][j], LCS[i][j-1]);
+				}
+			}
+		}
+		
+		String longestCommonString = "";
+		i = m;
+		j = n;
+		
+		while(LCS[i][j] > 0){
+			if(X.charAt(i-1) == Y.charAt(j-1)){
+				longestCommonString = X.charAt(i-1) + longestCommonString;
+				i--;
+				j--;
+			}
+			else{
+				if(LCS[i-1][j] == LCS[i][j]){
+					i--;
+				}else{
+					j--;
+				}
+			}
+		}
+		System.out.println(longestCommonString);
+		return LCS[m][n];
+	}
+	
 	public static void main(String args[]){
+		
+		_Practise p = new _Practise();
+		System.out.println(p.longestCommonSubsequence("ABCBDAB", "BDCABA"));
+		
 		int begin = 3;
 		int end = -4;
 		
@@ -54,6 +98,8 @@ public class _Practise {
 //		System.out.println(map);
 //		System.out.println(map1);
 		System.out.println("231".substring(3,3));
+		
+		System.out.println(Integer.toBinaryString(~(0)+1));
 	}
 	
 }
