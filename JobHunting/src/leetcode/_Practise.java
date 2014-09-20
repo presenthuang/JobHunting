@@ -112,6 +112,9 @@ public class _Practise {
 //		map1.put(2, 5);
 		
 		HashSet<Integer> Set = new HashSet<Integer>();
+		HashMap<String, String> result = new HashMap<>();
+		result.put(null, "temp");
+		System.out.println(result.get(null));
 //		if(Set.contains(map1)){
 //			System.out.println();
 //		}
