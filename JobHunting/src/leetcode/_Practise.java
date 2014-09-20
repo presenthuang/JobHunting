@@ -88,7 +88,10 @@ public class _Practise {
 	}
 	
 	public static void main(String args[]){
-		
+		double bit = 130.4;
+		byte name = (byte) bit;
+		long i1 = -1 >>> 2000;
+		System.out.println(i1);
 		_Practise p = new _Practise();
 		int [] num = {1, 12, 5, 26, 7, 14, 3, 7, 2};
 		for(int i = 0; i < num.length; ++i)

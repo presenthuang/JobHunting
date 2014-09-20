@@ -28,59 +28,42 @@ public class MinimumWindowSubstring {
     public String minWindow(String S, String T) {
     	if(S == null || T == null)
     		return null;
-    	HashMap<Character, Integer>needFind=new HashMap<Character, Integer>();
-        HashMap<Character, Integer>alreadyFind=new HashMap<Character, Integer>();
-        
-        for(int i=0; i<T.length(); i++){
-            alreadyFind.put(T.charAt(i), 0);
-            
-            if (needFind.containsKey(T.charAt(i))){
-                needFind.put(T.charAt(i), needFind.get(T.charAt(i))+1);
-            }
-            else{
-                needFind.put(T.charAt(i), 1);
-                
-            }
+    	HashMap<Character, Integer>need=new HashMap<Character, Integer>();
+        HashMap<Character, Integer>already=new HashMap<Character, Integer>();
+
+        for(int i=0; i<T.length(); i++){//this for loop will iterate all chars in T and save them to needFind.
+            already.put(T.charAt(i), 0);
+            if (need.containsKey(T.charAt(i)))
+                need.put(T.charAt(i), need.get(T.charAt(i))+1);
+            else
+                need.put(T.charAt(i), 1);
         }
+        
         int minStart=-1;
         int minEnd=S.length();
         int start=0;
         int len=0;
-        for (int i=0; i<S.length(); i++){
-            if (alreadyFind.containsKey(S.charAt(i))){
-                alreadyFind.put(S.charAt(i), alreadyFind.get(S.charAt(i))+1);
-                
-                if (alreadyFind.get(S.charAt(i))<=needFind.get(S.charAt(i))){
+        for (int i=0; i<S.length(); i++){//iterate all the string values in the S string and find out the least length
+            if (already.containsKey(S.charAt(i))){
+                already.put(S.charAt(i), already.get(S.charAt(i))+1);
+                if (already.get(S.charAt(i))<=need.get(S.charAt(i)))
                     len++;
-                }
-                
                 if (len==T.length()){
-                    while (!needFind.containsKey(S.charAt(start)) || alreadyFind.get(S.charAt(start))>needFind.get(S.charAt(start))){
-                        
-                        if (needFind.containsKey(S.charAt(start))){
-                            alreadyFind.put(S.charAt(start), alreadyFind.get(S.charAt(start))-1);
-                        }
-                        
+                    while (!need.containsKey(S.charAt(start))
+                    		|| already.get(S.charAt(start))>need.get(S.charAt(start))){
+                        if (need.containsKey(S.charAt(start)))
+                            already.put(S.charAt(start), already.get(S.charAt(start))-1);
                         start++;
                     }
                     if (i-start<minEnd-minStart){
                         minStart=start;
                         minEnd=i;
                     }
-                    
                 }
             }
-            
-            
         }
-        if (minStart==-1){
+        if (minStart==-1)
             return "";
-        }
         return S.substring(minStart, minEnd+1);
     }
-
-	public static void main(String[] args) {
-		MinimumWindowSubstring m = new MinimumWindowSubstring();
-		System.out.println(m.minWindow("ADOBECODEBANC", "ABC"));
-	}
 }
