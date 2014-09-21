@@ -5,8 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CombinationSum {
-// ==================================================================  //  
-//	Combination Sum
 //	Given a set of candidate numbers (C) and a target number (T), 
 //	find all unique combinations in C where the candidate numbers sums to T.
 //
@@ -20,7 +18,6 @@ public class CombinationSum {
 //	A solution set is: 
 //	[7] 
 //	[2, 2, 3] 
-//==================================================================  //
 	
 //	https://github.com/yuanx/leetcode/blob/master/CombinationSum.java
     
