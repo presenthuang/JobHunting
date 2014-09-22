@@ -1,4 +1,4 @@
-package leetcode;
+package dynamicProgramming;
 
 public class ScrambleString {
 //	Given a string s1, we may represent it as a binary tree 

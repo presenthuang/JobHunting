@@ -1,4 +1,4 @@
-package leetcode;
+package linkedList;
 
 public class RemoveDuplicatesfromSortedListII {
 //	Given a sorted linked list, 

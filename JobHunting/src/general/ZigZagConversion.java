@@ -1,4 +1,4 @@
-package leetcode;
+package general;
 
 public class ZigZagConversion {
 //	The string "PAYPALISHIRING" is written in a 

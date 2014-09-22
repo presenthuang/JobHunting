@@ -1,6 +1,6 @@
 package interviewQuestions;
 
-public class Division {
+public class Google_Division {
 	
 //	http://www.careercup.com/question?id=5764083194265600
 
