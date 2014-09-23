@@ -47,8 +47,6 @@ public class _Practise {
 		return -1;// when (l > r)
 	}
 	
-
-	
 	private int longestCommonSubsequence(String X, String Y){
 		int m = X.length();
 		int n = Y.length();
