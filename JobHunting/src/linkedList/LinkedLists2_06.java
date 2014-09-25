@@ -1,5 +1,7 @@
 package linkedList;
 
+import basic.LinkedListNode;
+
 
 public class LinkedLists2_06 {
 //Given a circular linked list, implement an algorithm which returns the node at the 

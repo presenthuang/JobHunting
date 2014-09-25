@@ -1,8 +1,8 @@
 package tree.traverse;
 
+import basic.TreeNode;
+
 public class RecoverBinarySearchTree {
-// ==================================================================  //  
-//	Recover Binary Search Tree
 //Two elements of a binary search tree (BST) are swapped by mistake.
 //
 //Recover the tree without changing its structure.
@@ -10,16 +10,6 @@ public class RecoverBinarySearchTree {
 //Note:
 //A solution using O(n) space is pretty straight forward. 
 //Could you devise a constant space solution?
-//==================================================================  // 
-	 /**
-     * Definition for binary tree
-     */
-      public class TreeNode {
-          int val;
-          TreeNode left;
-          TreeNode right;
-          TreeNode(int x) { val = x; }
-      } 
     TreeNode p,q;
     TreeNode pre;
     public void recoverTree(TreeNode root) {

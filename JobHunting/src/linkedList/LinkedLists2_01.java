@@ -3,6 +3,8 @@ package linkedList;
 import java.util.HashSet;
 import java.util.Set;
 
+import basic.LinkedListNode;
+
 public class LinkedLists2_01 {
 //Write code to remove duplicates from a unsorted linked list.
 	

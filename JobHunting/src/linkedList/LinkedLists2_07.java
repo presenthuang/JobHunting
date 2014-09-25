@@ -2,6 +2,8 @@ package linkedList;
 
 import java.util.LinkedList;
 
+import basic.LinkedListNode;
+
 public class LinkedLists2_07 {
 //Implement a function to check if a linked list is a palindrome.
 	boolean isPalindrome(LinkedListNode head){

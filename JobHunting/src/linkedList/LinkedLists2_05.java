@@ -1,5 +1,7 @@
 package linkedList;
 
+import basic.LinkedListNode;
+
 
 public class LinkedLists2_05 {
 //You have two numbers represented by a linked list, where each node contains a 

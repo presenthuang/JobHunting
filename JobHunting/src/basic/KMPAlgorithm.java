@@ -1,20 +1,17 @@
 package basic;
 
 public class KMPAlgorithm {
-	
 	/**
      * Pre processes the pattern array based on proper prefixes and proper
      * suffixes at every position of the array
      * 
-     * @param ptrn
-     *            word that is to be searched in the search string
+     * @param ptrn word that is to be searched in the search string
      * @return partial match table which indicates
      */
     public int[] preProcessPattern(char[] ptrn) {
         int i = 0, j = -1;
         int ptrnLen = ptrn.length;
         int[] b = new int[ptrnLen + 1];
- 
         b[i] = j;
         while (i < ptrnLen) {
             while (j >= 0 && ptrn[i] != ptrn[j]) {
@@ -31,27 +28,22 @@ public class KMPAlgorithm {
     /**
      * Based on the pre processed array, search for the pattern in the text
      * 
-     * @param text
-     *            text over which search happens
-     * @param ptrn
-     *            pattern that is to be searched
+     * @param text text over which search happens
+     * @param ptrn pattern that is to be searched
      */
     public void searchSubString(char[] text, char[] ptrn) {
         int i = 0, j = 0;
         // pattern and text lengths
         int ptrnLen = ptrn.length;
         int txtLen = text.length;
- 
         // initialize new array and preprocess the pattern
         int[] b = preProcessPattern(ptrn);
- 
         while (i < txtLen) {
             while (j >= 0 && text[i] != ptrn[j]) {
                 j = b[j];
             }
             i++;
             j++;
- 
             // a match is found
             if (j == ptrnLen) {
                 System.out.println("FOUND SUBSTRING AT i " + i + " and index:" + (i - ptrnLen));
@@ -60,11 +52,11 @@ public class KMPAlgorithm {
             }
         }
     }
+    
     public static void main(String[] args) {
 		KMPAlgorithm kmp = new KMPAlgorithm();
 		char[] ptrn = "bottlewater".toCharArray();
         char[] text = "waterbottlewaterbottle".toCharArray();
-        
         kmp.searchSubString(text, ptrn);
 	}
 }

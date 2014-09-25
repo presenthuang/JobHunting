@@ -1,5 +1,7 @@
 package linkedList;
 
+import basic.LinkedListNode;
+
 
 //see PartitonList.java
 public class LinkedLists2_04 {

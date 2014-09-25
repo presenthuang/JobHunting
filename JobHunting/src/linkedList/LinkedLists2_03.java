@@ -1,5 +1,7 @@
 package linkedList;
 
+import basic.LinkedListNode;
+
 
 public class LinkedLists2_03 {
 //Implement an algorithm to delete a node in the middle of a singly linked list, given only access to that node.
