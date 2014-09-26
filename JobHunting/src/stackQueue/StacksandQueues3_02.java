@@ -8,6 +8,7 @@ public class StacksandQueues3_02 {
 //	operate in O(1) time.
 	
 	//Design problem
+	@SuppressWarnings("serial")
 	public class StackWithMin extends Stack<Integer>{
 		Stack<Integer> s2;
 		public StackWithMin(){

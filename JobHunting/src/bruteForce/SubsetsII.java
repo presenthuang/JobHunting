@@ -2,7 +2,6 @@ package bruteForce;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class SubsetsII {
 //	Given a collection of integers that might contain duplicates, S, return all possible subsets.

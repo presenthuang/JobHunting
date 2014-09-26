@@ -1,7 +1,5 @@
 package string;
 
-import java.util.LinkedList;
-
 public class ArraysandStrings1_05 {
 //Implement a method to perform basic string compression 
 //	using the counts of repeated characters. 
