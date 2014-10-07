@@ -32,8 +32,7 @@ public class _3SumClosest {
 				if (Math.abs(total - target) < gap) {
 					returnval = total;
 				}
-				gap = Math.abs(total - target) < gap ? Math.abs(total - target)
-						: gap;
+				gap = Math.abs(total - target) < gap ? Math.abs(total - target) : gap;
 				if (total - target < 0) {
 					j++;
 				} else {

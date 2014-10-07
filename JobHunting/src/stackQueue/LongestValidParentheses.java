@@ -21,12 +21,12 @@ public class LongestValidParentheses {
         int start = 0;
         for(int i = 0; i < length; ++i){
         	char current = s.charAt(i);
-        	if(current == '('){
+        	if(current == '('){//if the parenthese is left, push the index of it.
         		stack.push(i);
-        	}else {
-				if(stack.isEmpty()){
+        	}else {//if the parenthese is right
+				if(stack.isEmpty()){//if the stack is empty, invalid, start move forward.
 					start = i+1;
-				}else {
+				}else {//pop the current number, which indicate the stack's last left parenthese
 					stack.pop();
 					total = stack.isEmpty()?Math.max(total, i-start+1):Math.max(total, i-stack.peek());
 				}
@@ -34,4 +34,9 @@ public class LongestValidParentheses {
         }
         return total;
     }
+    
+    public static void main(String[] args) {
+		LongestValidParentheses lig = new LongestValidParentheses();
+		System.out.println(lig.longestValidParentheses("()))()())"));
+	}
 }

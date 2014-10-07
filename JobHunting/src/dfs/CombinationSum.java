@@ -22,11 +22,16 @@ public class CombinationSum {
 //	https://github.com/yuanx/leetcode/blob/master/CombinationSum.java
     
 	public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        Arrays.sort(candidates);
-        List<List<Integer>> result = new ArrayList<List<Integer>>();
-        List<Integer> intermediate = new ArrayList<Integer>();
-        if(candidates.length == 0)
-        	return result;
+		  if(candidates == null){
+	            return null;
+	        }
+	        Arrays.sort(candidates);
+	        List<List<Integer>> result = new ArrayList<List<Integer>>();
+	        List<Integer> intermediate = new ArrayList<Integer>();
+	        if(candidates.length == 0){
+	            result.add(new ArrayList<Integer>());
+	        	return result;
+	        }
         int upper = candidates.length-1;
         while(upper >= 0){
         	if(candidates[upper] > target){
@@ -42,20 +47,19 @@ public class CombinationSum {
     }
 
 	private void helper(int[] candidates, List<List<Integer>> result, List<Integer> intermediate, int target, int start, int end) {
+		if(target < 0)
+			return;
 		if(target == 0){
-			List<Integer> reli = new ArrayList<Integer>(intermediate);
-			if(!result.contains(reli)){
-				result.add(reli);
-			}
+			result.add(new ArrayList<Integer>(intermediate));
 			return;
 		}
 		
 		for(int i = start; i <= end; ++i){
-			if(target - candidates[i] >= 0){
-				intermediate.add(candidates[i]);
-				helper(candidates, result, intermediate, target - candidates[i], i, end);
-				intermediate.remove(intermediate.size() - 1);
-			}
+			if(i > 0 && candidates[i] == candidates[i-1])
+				continue;
+			intermediate.add(candidates[i]);
+			helper(candidates, result, intermediate, target - candidates[i], i, end);
+			intermediate.remove(intermediate.size() - 1);
 		}
 	}
 }

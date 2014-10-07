@@ -66,4 +66,9 @@ public class MinimumWindowSubstring {
             return "";
         return S.substring(minStart, minEnd+1);
     }
+    
+    public static void main(String[] args) {
+		MinimumWindowSubstring ms = new MinimumWindowSubstring();
+		System.out.println(ms.minWindow("abc", "ac"));
+	}
 }

@@ -1,6 +1,6 @@
 package interviewQuestions;
 
-public class ReverseWordsInAString {
+public class Bloomberg_ReverseWordsInAString {
 
 	/**
 	 * Leetcode's version
