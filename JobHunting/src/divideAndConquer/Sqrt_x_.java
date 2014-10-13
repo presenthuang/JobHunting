@@ -4,6 +4,8 @@ public class Sqrt_x_ {
 //	Implement int sqrt(int x).
 //
 //	Compute and return the square root of x.
+	
+//	Use binary search and be careful about the square thing
     public int sqrt(int x) {
     	if(x == 0 || x == 1)
     		return x;

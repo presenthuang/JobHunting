@@ -12,6 +12,7 @@ public class RestoreIPAddresses {
 //
 //	return ["255.255.11.135", "255.255.111.35"]. (Order does not matter)
 	
+//	upgrade version for valid number, need to take care with different situations.
     public List<String> restoreIpAddresses(String s) {
     	List<String> results = new ArrayList<String>();
     	if(s==null || s.length()==0)  

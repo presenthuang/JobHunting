@@ -17,6 +17,7 @@ public class ZigZagConversion {
 	
 //	http://www.lifeincode.net/programming/leetcode-zigzag-conversion-java/
 	
+//	learn about the formula
 	public String convert(String s, int nRows) {
 		if(nRows == 1)
 			return s;

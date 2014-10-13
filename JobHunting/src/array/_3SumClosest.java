@@ -29,10 +29,11 @@ public class _3SumClosest {
 				num2 = num[j];
 				num3 = num[k];
 				int total = num1 + num2 + num3;
-				if (Math.abs(total - target) < gap) {
+				int newGap = Math.abs(total - target); 
+				if (newGap < gap) {
 					returnval = total;
 				}
-				gap = Math.abs(total - target) < gap ? Math.abs(total - target) : gap;
+				gap = newGap < gap ? newGap : gap;
 				if (total - target < 0) {
 					j++;
 				} else {

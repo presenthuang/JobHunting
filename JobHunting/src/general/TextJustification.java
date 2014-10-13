@@ -28,6 +28,8 @@ public class TextJustification {
 //	   "justification.  "
 //	]
 //	Note: Each word is guaranteed not to exceed L in length.
+	
+//	Be careful about border problems
     public List<String> fullJustify(String[] words, int L) {
         List<String> result = new ArrayList<>();
         if(words == null || words.length == 0)

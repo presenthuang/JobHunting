@@ -11,6 +11,7 @@ public class FirstMissingPositive {
 
 //	http://www.cnblogs.com/AnnieKim/archive/2013/04/21/3034631.html
 	
+//	Swap would be a good idea
     public int firstMissingPositive(int[] A) {
     	int length = A.length;
     	int i = 0;

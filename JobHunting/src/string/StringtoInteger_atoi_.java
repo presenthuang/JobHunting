@@ -9,6 +9,8 @@ public class StringtoInteger_atoi_ {
 //	Notes: It is intended for this problem to be specified vaguely 
 //	(ie, no given input specs). You are responsible to gather all the input requirements up front.
 	
+	
+//	Considering for the different situation: space/sign/exceed the maximum value of integer
     public int atoi(String str) {
     	long result = 0;
     	boolean flag = false;

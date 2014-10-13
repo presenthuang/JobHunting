@@ -18,7 +18,7 @@ public class DecodeWays {
 //		The number of ways decoding "12" is 2.
 	
 //	http://rleetcode.blogspot.com/2014/01/decode-ways-java.html
-	
+//	using db, hard to write, need further implementation
     public int numDecodings(String s) {
         if(s == null || s.length() == 0)
         	return 0;

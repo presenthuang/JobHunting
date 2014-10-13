@@ -10,6 +10,7 @@ public class RemoveDuplicatesfromSortedArray {
 //
 //			Your function should return length = 2, and A is now [1,2].
 	
+//	Don't think about swap the values, just replace them.
 	public int removeDuplicates(int[] A) {
 		int length = A.length;
 		if(length <= 1)

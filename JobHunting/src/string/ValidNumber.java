@@ -11,6 +11,9 @@ public class ValidNumber {
 //	"2e10" => true
 //	Note: It is intended for the problem statement to be ambiguous. 
 //	You should gather all requirements up front before implementing one.
+	
+//	Need to verify again!!! Too many cases!!!!!!!
+	
 //    public boolean isNumber(String s) {
 //        if(s == null)
 //        	return false;

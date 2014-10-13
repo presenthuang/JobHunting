@@ -10,6 +10,7 @@ public class GenerateParentheses {
 //
 //	"((()))", "(()())", "(())()", "()(())", "()()()"
 	
+//	Using recursive method for this subject to calculate
 	public List<String> generateParenthesis(int n) {
         List<String> result = new ArrayList<String>();
         if(n!=0){

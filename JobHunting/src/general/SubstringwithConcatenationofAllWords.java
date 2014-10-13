@@ -19,7 +19,7 @@ public class SubstringwithConcatenationofAllWords {
 //	(order does not matter).
 	
 //	source: https://github.com/rffffffff007/leetcode/blob/master/Substring%20with%20Concatenation%20of%20All%20Words.java
-	
+//	use the same strategy as in window one
     public ArrayList<Integer> findSubstring(String S, String[] L) {
         ArrayList<Integer> subPos = new ArrayList<Integer>();
         if (S == null || S.length()  == 0 || L == null || L.length == 0)

@@ -6,6 +6,8 @@ public class AddTwoNumbers {
 //			Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
 //			Output: 7 -> 0 -> 8
 	
+//	Beware of the border situation! Too many thinks to take care of so just keep in mind 
+//	use the elegant recursive method
 	public class ListNode {
 		int val;
 		ListNode next;

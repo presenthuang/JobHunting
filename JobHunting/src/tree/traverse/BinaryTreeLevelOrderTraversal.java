@@ -48,6 +48,7 @@ public class BinaryTreeLevelOrderTraversal {
 //		helper(result,node.right,level+1);
 //	}
     
+//	Combine with the other traverse
 //	Iterative method
 	public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
 		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();

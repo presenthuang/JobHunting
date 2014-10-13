@@ -11,6 +11,7 @@ public class PermutationsII {
 //			[1,1,2] have the following unique permutations:
 //			[1,1,2], [1,2,1], and [2,1,1].
 	
+//	carefully remove the situation that the duplicate elements are together
     public List<List<Integer>> permuteUnique(int[] num) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         boolean [] visited = new boolean[num.length];

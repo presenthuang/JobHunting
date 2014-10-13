@@ -5,6 +5,8 @@ public class DivideTwoIntegers {
 	
 	
 //	http://blog.csdn.net/linhuanmars/article/details/20024907
+	
+//	use pow of 2 to deal with it.
 	public int divide(int dividend, int divisor) {
 		if (divisor == 0)
 			return Integer.MAX_VALUE;

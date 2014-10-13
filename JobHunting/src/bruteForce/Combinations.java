@@ -17,6 +17,8 @@ public class Combinations {
 //			  [1,3],
 //			  [1,4],
 //			]
+	
+//	This one need further review with the Permutation about this recursive method.
     public List<List<Integer>> combine(int n, int k) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         boolean [] used = new boolean[n+1];

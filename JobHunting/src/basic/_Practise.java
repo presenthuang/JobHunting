@@ -334,6 +334,10 @@ public class _Practise {
 	}
 	
 	public static void main(String args[]){
+		System.out.println(Integer.MAX_VALUE);
+		int in = 1;
+		byte term = (byte)0x0a;
+		StringBuilder sb = new StringBuilder();
 		double bit = 130.4;
 		byte name = (byte) bit;
 		long i1 = -1 >>> 2000;

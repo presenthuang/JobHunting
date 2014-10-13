@@ -10,6 +10,8 @@ public class AddBinary {
 	// b = "1"
 	// Return "100".
 	// ================================================================== //
+	
+//	I think we should use stringbuilder to store the result and calculate the information
 	public String addBinary(String a, String b) {
 		int lengtha = a.length();
 		int lengthb = b.length();

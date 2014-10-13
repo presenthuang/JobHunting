@@ -24,6 +24,8 @@ public class Subsets {
 //			  [1,2],
 //			  []
 //			]
+	
+//	using a stack to store the information about push and pop for an element.
     public List<List<Integer>> subsets(int[] S) {
     	List<List<Integer>> result = new ArrayList<List<Integer>>();
         if(S == null)

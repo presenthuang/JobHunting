@@ -20,7 +20,7 @@ public class SubsetsII {
 //			  [1,2],
 //			  []
 //			]
-	
+//	just use this dfs method
 	public ArrayList<ArrayList<Integer>> subsetsWithDup(int[] num) {  
 	       ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();  
 	       ArrayList<Integer> tmp = new ArrayList<Integer>();  

@@ -19,6 +19,7 @@ public class UniquePathsII {
 //
 //		Note: m and n will be at most 100.
 	
+//	easy to deal with a 2d array
 	public int uniquePathsWithObstacles(int[][] obstacleGrid) {
 		if(obstacleGrid.length == 0)
 			return 0;

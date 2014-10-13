@@ -9,6 +9,8 @@ public class Anagrams {
 //	Given an array of strings, return all groups of strings that are anagrams.
 //
 //			Note: All inputs will be in lower-case.
+	
+//	Use a hashtable to store the information about the strings that are anagrams.
     public List<String> anagrams(String[] strs) {
         HashMap<String, ArrayList<String>> stored = new HashMap<>();
         List<String> result = new ArrayList<String>();

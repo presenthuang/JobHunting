@@ -11,7 +11,8 @@ public class ValidPalindrome {
 //	Have you consider that the string might be empty? This is a good question to ask during an interview.
 //
 //	For the purpose of this problem, we define empty string as valid palindrome.
-	
+
+//	have an solution with only constant space
 	 public boolean isPalindrome(String s) {
 		 if(s == null)
 			 return true;

@@ -21,6 +21,8 @@ public class SumRoottoLeafNumbers {
 	//
 	// Return the sum = 12 + 13 = 25.
 	// ================================================================== //
+	
+//	same way of working for the tree traverse
 	/**
 	 * Definition for binary tree
 	 */

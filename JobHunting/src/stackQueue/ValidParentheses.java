@@ -7,7 +7,9 @@ public class ValidParentheses {
 //	'(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 //
 //	The brackets must close in the correct order, 
-//	"()" and "()[]{}" are all valid but "(]" and "([)]" are not.	
+//	"()" and "()[]{}" are all valid but "(]" and "([)]" are not.
+	
+//	just use a stack and save different char in, there is only 6 kinds of parentheses
 	public boolean isValid(String s) {
 		Stack<Integer> stack = new Stack<Integer>();
 		int length = s.length();

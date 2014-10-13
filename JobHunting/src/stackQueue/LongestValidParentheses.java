@@ -14,6 +14,7 @@ public class LongestValidParentheses {
 	
 //	http://codeganker.blogspot.com/2014/03/longest-valid-parentheses-leetcode.html
 	
+//	use stack
     public int longestValidParentheses(String s) {
         Stack<Integer> stack = new Stack<>();
         int length = s.length();

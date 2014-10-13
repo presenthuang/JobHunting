@@ -16,6 +16,7 @@ public class SetMatrixZeroes {
 //	use mark to set elements
 //	set first column and row by using marks in step 1	
 	
+//	have an solution with only constant space
 	public void setZeroes(int[][] matrix) {
         boolean firstrowzero = false;
         boolean firstcolumnzero = false;

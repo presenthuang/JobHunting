@@ -10,6 +10,7 @@ public class PartitionList {
 //	Given 1->4->3->2->5->2 and x = 3,
 //	return 1->2->2->4->3->5.
 	
+//	one thing is to use 2 linked list to store both larger and smaller parts, then combine the two lists.
 	 public class ListNode {
 		int val;
 		ListNode next;

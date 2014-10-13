@@ -11,6 +11,8 @@ public class MergeIntervals {
 //	return [1,6],[8,10],[15,18].
 	
 	//N^2 solution, not so good.
+	
+//	No need to sort also could work out a solution, but n^2, should sort at first
 	 public class Interval {
 		 int start;
 		 int end;

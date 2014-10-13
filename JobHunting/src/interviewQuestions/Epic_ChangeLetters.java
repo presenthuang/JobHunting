@@ -18,6 +18,7 @@ public class Epic_ChangeLetters {
 				lowCaseLetters.add(cur);
 				pos.add(i);
 			}
+			
 		}
 		helper(result, input, new StringBuilder(input), lowCaseLetters, pos, 0);
 		return result;

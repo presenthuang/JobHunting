@@ -5,6 +5,8 @@ public class MinimumPathSum {
 //	find a path from top left to bottom right which minimizes the sum of all numbers along its path.
 //
 //	Note: You can only move either down or right at any point in time.
+	
+//	traditional dp prob should be improved.
     public int minPathSum(int[][] grid) {
         if(grid == null)
         	return 0;

@@ -17,6 +17,8 @@ public class InsertInterval {
 //	Given [1,2],[3,5],[6,7],[8,10],[12,16], insert and merge [4,9] in as [1,2],[3,10],[12,16].
 //
 //	This is because the new interval [4,9] overlaps with [3,5],[6,7],[8,10].
+	
+//	same as above, need remember the method
 	public class Interval {
 		int start;
 		int end;

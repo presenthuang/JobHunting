@@ -19,6 +19,7 @@ public class WordSearch {
 //	word = "SEE", -> returns true,
 //	word = "ABCB", -> returns false.
 	
+//	use dfs, but be careful about the situation in the border and how to control which one is used.
     public boolean exist(char[][] board, String word) {
         boolean [][] used = new boolean [board.length][board[0].length];
         for(int row = 0; row < board.length; ++row){

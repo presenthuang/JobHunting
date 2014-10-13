@@ -5,6 +5,7 @@ public class MultiplyStrings {
 //
 //	Note: The numbers can be arbitrarily large and are non-negative.
 	
+//	we could use the arraylist to store the multiple results.
     public String multiply(String num1, String num2) {
 		StringBuffer numBuffer1 = new StringBuffer(num1).reverse();
 		StringBuffer numBuffer2 = new StringBuffer(num2).reverse();

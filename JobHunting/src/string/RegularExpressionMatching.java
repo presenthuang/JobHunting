@@ -20,6 +20,7 @@ public class RegularExpressionMatching {
 //	isMatch("ab", ".*") → true
 //	isMatch("aab", "c*a*b") → true
 	
+//	The most trickest part for this is that you need to find all different kinds of combinations.
     public boolean isMatch(String s, String p) {
         char[] as = s.toCharArray();
         char[] bs = p.toCharArray();

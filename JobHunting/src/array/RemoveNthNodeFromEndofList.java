@@ -13,6 +13,8 @@ public class RemoveNthNodeFromEndofList {
 //			Note:
 //			Given n will always be valid.
 //			Try to do this in one pass.
+	
+//	Just be careful with the border cases
     public ListNode removeNthFromEnd(ListNode head, int n) {
     	ListNode dummy = new ListNode(0);
     	dummy.next = head;

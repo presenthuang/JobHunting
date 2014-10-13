@@ -10,7 +10,9 @@ public class MaximumSubarray {
 //
 //	More practice:
 //	If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
-    public int maxSubArray(int[] A) {
+    
+	//Easy dp, but be careful what we save is the last biggest num.
+	public int maxSubArray(int[] A) {
         if(A == null || A.length == 0){
         	return 0;
         }

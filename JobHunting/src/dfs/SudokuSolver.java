@@ -9,6 +9,7 @@ public class SudokuSolver {
 	
 //	http://blog.csdn.net/linhuanmars/article/details/20748761
 	
+//	Using dfs to iterate all possible situations
     public void solveSudoku(char[][] board) {
         if(board == null || board.length != 9 || board[0].length != 9)
         	return;

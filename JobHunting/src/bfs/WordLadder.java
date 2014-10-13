@@ -23,6 +23,7 @@ public class WordLadder {
 //		All words have the same length.
 //		All words contain only lowercase alphabetic characters.
 	
+//	Use bfs and linkedlist to store the information and then calcuate every step
     public int ladderLength(String start, String end, Set<String> dict) {
         if (dict.size() == 0)
         	return 0;
