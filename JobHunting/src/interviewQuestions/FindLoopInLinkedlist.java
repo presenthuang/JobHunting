@@ -1,6 +1,6 @@
 package interviewQuestions;
 
-import basic.LinkedListNode;
+import utils.LinkedListNode;
 
 public class FindLoopInLinkedlist {
 	boolean hasLoop(LinkedListNode first) {

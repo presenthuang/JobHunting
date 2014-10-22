@@ -5,6 +5,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+import utils.TreeNode;
+
 public class BinaryTreeLevelOrderTraversal {
 //	Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
 //
@@ -21,13 +23,6 @@ public class BinaryTreeLevelOrderTraversal {
 //			  [9,20],
 //			  [15,7]
 //			]
-	public class TreeNode {
-		 int val;
-		 TreeNode left;
-		 TreeNode right;
-		 TreeNode(int x) { val = x; }
-	}
-	
 	//Recursion Method, not fast
 //    public List<List<Integer>> levelOrder(TreeNode root) {
 //    	List<List<Integer>> result = new ArrayList<List<Integer>>();

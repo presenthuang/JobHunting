@@ -1,5 +1,7 @@
 package linkedList;
 
+import utils.ListNode;
+
 public class ReverseLinkedListII {
 	// ================================================================== //
 	// Reverse Linked List II
@@ -15,19 +17,6 @@ public class ReverseLinkedListII {
 	// Given m, n satisfy the following condition:
 	// 1 ≤ m ≤ n ≤ length of list.
 	// ================================================================== //
-	/**
-	 * Definition for singly-linked list.
-	 */
-	class ListNode {
-		int val;
-		ListNode next;
-
-		ListNode(int x) {
-			val = x;
-			next = null;
-		}
-	}
-
 	public ListNode reverseBetween(ListNode head, int m, int n) {
 		ListNode dummy = new ListNode(0);
 		dummy.next = head;

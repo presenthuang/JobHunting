@@ -1,5 +1,7 @@
 package linkedList;
 
+import utils.ListNode;
+
 public class PartitionList {
 //	Given a linked list and a value x, 
 //	partition it such that all nodes less than x come before nodes greater than or equal to x.
@@ -11,14 +13,6 @@ public class PartitionList {
 //	return 1->2->2->4->3->5.
 	
 //	one thing is to use 2 linked list to store both larger and smaller parts, then combine the two lists.
-	 public class ListNode {
-		int val;
-		ListNode next;
-		ListNode(int x) {
-		val = x;
-		next = null;
-		}
-	}
 	public ListNode partition(ListNode head, int x) {
 		if(head == null)
 			return null;

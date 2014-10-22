@@ -2,7 +2,7 @@ package cc150.Question02;
 
 import java.util.LinkedList;
 
-import basic.LinkedListNode;
+import utils.LinkedListNode;
 
 public class LinkedLists2_07 {
 //Implement a function to check if a linked list is a palindrome.

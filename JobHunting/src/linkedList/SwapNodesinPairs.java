@@ -1,5 +1,7 @@
 package linkedList;
 
+import utils.ListNode;
+
 public class SwapNodesinPairs {
 //	Given a linked list, swap every two adjacent nodes and return its head.
 //
@@ -9,14 +11,6 @@ public class SwapNodesinPairs {
 //			Your algorithm should use only constant space. 
 //	You may not modify the values in the list, only nodes itself can be changed.
 //	Be careful about the correctness of the pointer move, may need 2 or 3 nodes
-	 public class ListNode {
-		int val;
-		ListNode next;
-		ListNode(int x) {
-		val = x;
-		next = null;
-		}
-	}
 	public ListNode swapPairs(ListNode head) {
 		if(head == null || head.next == null){
 			return head;

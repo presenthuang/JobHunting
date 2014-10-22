@@ -19,20 +19,20 @@ public class SearchinRotatedSortedArrayII {
         	int m = (l + r) / 2;
         	if(A[m] == target)
         		return true;
-    		if(A[l] < A[m]){
-    			if(A[l] <= target && target < A[m]){
+    		if(A[l] < A[m]){//if left smaller than mid, then left is correct order
+    			if(A[l] <= target && target < A[m]){//if target in the left part.
     				r = m - 1;
-    			}else{
+    			}else{//target in the right part.
     				l = m + 1;
     			}
-    		}else if(A[l] > A[m]){
-    			if(A[m] < target && target <= A[r]){
+    		}else if(A[l] > A[m]){//if left larger than middle, then left is not correct.
+    			if(A[m] < target && target <= A[r]){//if target in the right part.
     				l = m + 1;
-    			}else{
+    			}else{//target in the left part
     				r = m - 1;
     			}
     		}else {
-				l++;
+				l++;//just move the left for one because we cant decide where it is with duplicates.
 			}
         }
         return false;

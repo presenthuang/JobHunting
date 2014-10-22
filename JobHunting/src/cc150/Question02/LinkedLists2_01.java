@@ -3,7 +3,7 @@ package cc150.Question02;
 import java.util.HashSet;
 import java.util.Set;
 
-import basic.LinkedListNode;
+import utils.LinkedListNode;
 
 public class LinkedLists2_01 {
 //Write code to remove duplicates from a unsorted linked list.

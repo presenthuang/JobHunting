@@ -3,6 +3,8 @@ package tree.recursion;
 import java.util.ArrayList;
 import java.util.List;
 
+import utils.TreeNode;
+
 public class PathSumII {
 //	Given a binary tree and a sum, find all root-to-leaf paths where each path's sum equals the given sum.
 //
@@ -22,13 +24,6 @@ public class PathSumII {
 //	]
 	
 //	simple dfs method
-	 public class TreeNode {
-		 int val;
-		 TreeNode left;
-		 TreeNode right;
-		 TreeNode(int x) { val = x; }
-	 }
-	 
 	 public List<List<Integer>> pathSum(TreeNode root, int sum) {
 	        List<List<Integer>> results = new ArrayList<List<Integer>>();
 	        if(root == null || (root.left == null && root.right == null && root.val != sum))

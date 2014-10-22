@@ -1,6 +1,6 @@
 package cc150.Question04;
 
-import basic.TreeNode;
+import utils.TreeNode;
 
 public class TreesandGraphs4_03 {
 //Given a sorted (increasing order) array with unique integer elements, write an algorithm

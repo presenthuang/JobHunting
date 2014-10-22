@@ -1,6 +1,6 @@
 package cc150.Question02;
 
-import basic.LinkedListNode;
+import utils.LinkedListNode;
 
 
 //see PartitonList.java

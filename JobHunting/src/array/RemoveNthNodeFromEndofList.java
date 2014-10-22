@@ -1,6 +1,6 @@
 package array;
 
-import basic.ListNode;
+import utils.ListNode;
 
 public class RemoveNthNodeFromEndofList {
 //	Given a linked list, remove the nth node from the end of list and return its head.

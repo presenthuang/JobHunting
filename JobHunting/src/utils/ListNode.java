@@ -1,4 +1,4 @@
-package basic;
+package utils;
 
 public class ListNode {
 	public int val;

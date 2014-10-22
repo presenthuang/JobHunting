@@ -1,5 +1,7 @@
 package tree.recursion;
 
+import utils.TreeNode;
+
 public class SumRoottoLeafNumbers {
 	// ================================================================== //
 	// Sum Root to Leaf Numbers
@@ -23,19 +25,6 @@ public class SumRoottoLeafNumbers {
 	// ================================================================== //
 	
 //	same way of working for the tree traverse
-	/**
-	 * Definition for binary tree
-	 */
-	public class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
-
-		TreeNode(int x) {
-			val = x;
-		}
-	}
-
 	public int sumNumbers(TreeNode root) {
 		return sums(root, "");
 	}

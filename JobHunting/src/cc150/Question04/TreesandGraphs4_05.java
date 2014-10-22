@@ -1,6 +1,6 @@
 package cc150.Question04;
 
-import basic.TreeNode;
+import utils.TreeNode;
 
 public class TreesandGraphs4_05 {
 //Implement a function to check if a binary tree is a binary search tree.

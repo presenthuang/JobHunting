@@ -1,5 +1,7 @@
 package linkedList;
 
+import utils.ListNode;
+
 public class ReorderList {
 	// ================================================================== //
 	// Reorder List
@@ -11,19 +13,6 @@ public class ReorderList {
 	// For example,
 	// Given {1,2,3,4}, reorder it to {1,4,2,3}.
 	// ================================================================== //
-	/**
-	 * Definition for singly-linked list.
-	 */
-	class ListNode {
-		int val;
-		ListNode next;
-
-		ListNode(int x) {
-			val = x;
-			next = null;
-		}
-	}
-
 	public void reorderList(ListNode head) {
 		if (head == null || head.next == null || head.next.next == null)
 			return;

@@ -1,6 +1,6 @@
 package cc150.Question04;
 
-import basic.TreeNode;
+import utils.TreeNode;
 
 public class TreesandGraphs4_06 {
 //Write an algorithm to find the 'next' node (i.e., in-order successor) of a given node in

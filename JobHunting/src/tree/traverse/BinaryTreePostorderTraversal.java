@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import basic.TreeNode;
+import utils.TreeNode;
 
 public class BinaryTreePostorderTraversal {
 //	Given a binary tree, return the postorder traversal of its nodes' values.

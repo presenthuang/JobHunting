@@ -1,5 +1,7 @@
 package linkedList;
 
+import utils.ListNode;
+
 public class ReverseNodesink_Group {
 //	Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
 //
@@ -15,8 +17,26 @@ public class ReverseNodesink_Group {
 //			For k = 2, you should return: 2->1->4->3->5
 //
 //			For k = 3, you should return: 3->2->1->4->5
-	
-	/**
+    public ListNode reverseKGroup(ListNode head, int k) {
+    	if(head == null || k == 1)
+    		return head;
+    	ListNode fakeNode = new ListNode(0);
+    	fakeNode.next = head;
+    	ListNode pre = fakeNode;
+    	ListNode last = head;
+    	int i = 0;
+    	while(last != null){
+    		i++;
+    		if(i % k == 0){//reverse between these k nodes.
+    			pre = reverse(pre, last.next);
+    			last = pre.next;
+    		}else {
+				last = last.next;
+			}
+    	}
+    	return fakeNode.next;
+    }
+    /**
      * Reverse a link list between pre and next exclusively
      * an example:
      * a linked list:
@@ -32,15 +52,6 @@ public class ReverseNodesink_Group {
      * @param next
      * @return the reversed list's last node, which is the precedence of parameter next
      */
-	public class ListNode {
-		int val;
-		ListNode next;
-		ListNode(int x) {
-		val = x;
-		next = null;
-		}
-	}
-	
 	private static ListNode reverse(ListNode pre, ListNode next){
 		ListNode last = pre.next;
 		ListNode cur = last.next;
@@ -52,23 +63,4 @@ public class ReverseNodesink_Group {
 		}
 		return last;
 	}
-    public ListNode reverseKGroup(ListNode head, int k) {
-    	if(head == null || k == 1)
-    		return head;
-    	ListNode fakeNode = new ListNode(0);
-    	fakeNode.next = head;
-    	ListNode pre = fakeNode;
-    	int i = 0;
-    	while(head != null){
-    		i++;
-    		if(i % k == 0){
-    			pre = reverse(pre, head.next);
-    			head = pre.next;
-    		}else {
-				head = head.next;
-			}
-    	}
-    	return fakeNode.next;
-    }
-    
 }

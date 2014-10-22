@@ -1,5 +1,7 @@
 package linkedList;
 
+import utils.ListNode;
+
 public class AddTwoNumbers {
 //	You are given two linked lists representing two non-negative numbers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
 //
@@ -8,14 +10,6 @@ public class AddTwoNumbers {
 	
 //	Beware of the border situation! Too many thinks to take care of so just keep in mind 
 //	use the elegant recursive method
-	public class ListNode {
-		int val;
-		ListNode next;
-		ListNode(int x) {
-			val = x;
-			next = null;
-		}
-	}
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if(l1 == null)
         	return l2;

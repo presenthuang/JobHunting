@@ -1,6 +1,6 @@
 package tree.recursion;
 
-import basic.TreeNode;
+import utils.TreeNode;
 
 public class DiameterOfTree {
 	static int diameterOfTree(TreeNode root) {

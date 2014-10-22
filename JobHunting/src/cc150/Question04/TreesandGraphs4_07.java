@@ -1,6 +1,6 @@
 package cc150.Question04;
 
-import basic.TreeNode;
+import utils.TreeNode;
 
 public class TreesandGraphs4_07 {
 //Design an algorithm and write code to find the first common ancestor of two nodes

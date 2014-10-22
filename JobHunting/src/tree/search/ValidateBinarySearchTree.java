@@ -1,5 +1,7 @@
 package tree.search;
 
+import utils.TreeNode;
+
 public class ValidateBinarySearchTree {
 //	Given a binary tree, determine if it is a valid binary search tree (BST).
 //
@@ -10,12 +12,6 @@ public class ValidateBinarySearchTree {
 //	Both the left and right subtrees must also be binary search trees.
 
 //	have an solution with only constant space
-	 public class TreeNode {
-	     int val;
-		 TreeNode left;
-		 TreeNode right;
-		 TreeNode(int x) { val = x; }
-	 }
 	 public boolean isValidBST(TreeNode root) {
 		 if (root == null)
 			 return true;

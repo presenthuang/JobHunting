@@ -2,6 +2,8 @@ package tree.traverse;
 
 import java.util.Stack;
 
+import utils.TreeNode;
+
 public class FlattenBinaryTreetoLinkedList {
 	// ==================================================================  //    
 //	Flatten Binary Tree to Linked List 
@@ -33,19 +35,6 @@ public class FlattenBinaryTreetoLinkedList {
 //If you notice carefully in the flattened tree, 
 //each node's right child points to the next node of a pre-order traversal.
 //==================================================================  //    
-	/**
-	 * Definition for binary tree
-	 */
-	public class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
-
-		TreeNode(int x) {
-			val = x;
-		}
-	}
-
 	public void flatten(TreeNode root) {
 		if (root == null)
 			return;

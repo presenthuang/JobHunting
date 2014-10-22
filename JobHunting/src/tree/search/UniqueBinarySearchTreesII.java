@@ -3,6 +3,8 @@ package tree.search;
 import java.util.ArrayList;
 import java.util.List;
 
+import utils.TreeNode;
+
 public class UniqueBinarySearchTreesII {
 //	Given n, generate all structurally unique BST's (binary search trees) that store values 1...n.
 //
@@ -16,13 +18,6 @@ public class UniqueBinarySearchTreesII {
 //	   2     1         2                 3
 	
 //	http://blog.csdn.net/linhuanmars/article/details/24761437
-	
-	 public class TreeNode {
-		 int val;
-		 TreeNode left;
-		 TreeNode right;
-		 TreeNode(int x) { val = x; left = null; right = null; }
-	 }
 	    public List<TreeNode> generateTrees(int n) {
 	        return helper(1,n);
 	    }

@@ -1,34 +1,43 @@
 package basic;
 
 public class Quicksort {
-	
-	public void quicksort(int[] num, int i, int j){
-		int index = partition(num,i,j);//every time quicksort would leave one element to be the correct position
-		if(i < index - 1){//
-			quicksort(num, i, index-1);
-		}
-		if(index < j){
-			quicksort(num, index, j);
+
+	public void quicksort(int[] num, int i, int j) {
+		if (i < j) {
+			int index = partition(num, i, j);// every time quicksort would leave
+												// one element to be the correct
+												// position
+			quicksort(num, i, index - 1);
+			quicksort(num, index + 1, j);
 		}
 	}
-	
-	private int partition(int[] num, int left, int right) {
-		int i = left;
-		int j = right;
-		int pivot = num[(left + right) / 2];
-		while(i <= j){
-			while(num[i] < pivot)
-				i++;
-			while(num[j] > pivot)
-				j--;
-			if(i <= j){
-					int temp = num[i];
-					num[i] = num[j];
-					num[j] = temp;
-					i++;
-					j--;
+
+	private int partition(int[] num, int left, int right) {// partition to find
+															// one element in
+															// the array.
+		int pivotVal = num[right];// choose the rightmost element as pivot
+		int returnIndex = left;// start from left of the subarray.
+		for (int i = left; i < right; ++i) {// loop the whole array and swap all
+											// the elements that are smaller
+											// than the pivot.
+			if (num[i] <= pivotVal) {
+				int temp = num[i];// swap array[i] and array[returnIndex]
+				num[i] = num[returnIndex];
+				num[returnIndex] = temp;
+				returnIndex++;
 			}
 		}
-		return i;
+		num[right] = num[returnIndex];// returnIndex should be the correct index
+										// for pivot, swap array[right] and
+										// array[returnIndex]
+		num[returnIndex] = pivotVal;
+		return returnIndex;
+	}
+	public static void main(String[] args) {
+		int[] num = {1, 2, 2, 3, 3, 3, 4, 5, 5, 7, 8, 56};
+		new Quicksort().quicksort(num, 0, num.length-1);
+		for(int i = 0; i < num.length; ++i){
+			System.out.print(num[i] + " ");
+		}
 	}
 }

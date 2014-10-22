@@ -1,5 +1,7 @@
 package tree.recursion;
 
+import utils.TreeNode;
+
 public class BinaryTreeMaximumPathSum {
 // ==================================================================  //  
 //  Binary Tree Maximum Path Sum
@@ -15,15 +17,6 @@ public class BinaryTreeMaximumPathSum {
 //       2   3
 //  Return 6.
 //==================================================================  //
-	 /**
-     * Definition for binary tree
-     */
-      public class TreeNode {
-          int val;
-          TreeNode left;
-          TreeNode right;
-          TreeNode(int x) { val = x; }
-      }  
     int max = Integer.MIN_VALUE;
     public int maxPathSum(TreeNode root) {
         if(root == null)

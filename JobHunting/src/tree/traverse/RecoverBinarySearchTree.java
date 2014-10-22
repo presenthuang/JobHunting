@@ -1,6 +1,6 @@
 package tree.traverse;
 
-import basic.TreeNode;
+import utils.TreeNode;
 
 public class RecoverBinarySearchTree {
 //Two elements of a binary search tree (BST) are swapped by mistake.
