@@ -15,10 +15,12 @@ public class LongestPalindromicSubstring {
         	return s;
         String longest = s.substring(0,1);
         for(int i = 0; i < length; ++i){
+        	//if the palindromic string is odd length
         	String temp = helper(s, i, i);
         	if(temp.length() > longest.length()){
         		longest = temp;
         	}
+        	//if the palindromic string is even length
         	temp = helper(s, i, i+1);
         	if(temp.length() > longest.length()){
         		longest = temp;

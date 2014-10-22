@@ -21,23 +21,40 @@ public class BinaryTreeInorderTraversal {
 //			Note: Recursive solution is trivial, could you do it iteratively?
 	
 	//iteratively traverse.
-    public List<Integer> inorderTraversal(TreeNode root) {
-        List<Integer> result = new ArrayList<Integer>();
-        LinkedList<TreeNode> stack = new LinkedList<TreeNode>();
-        if(root == null){
-            return result;
-        }
-        TreeNode cur = root;
-        while(!stack.isEmpty() || cur != null){
-            if(cur != null){
-                stack.push(cur);
-                cur = cur.left;
-            }else{
-                cur = stack.pop();
-                result.add(cur.val);
-                cur = cur.right;
-            }
-        }
-        return result;
-    }
+//    public List<Integer> inorderTraversal(TreeNode root) {
+//        List<Integer> result = new ArrayList<Integer>();
+//        LinkedList<TreeNode> stack = new LinkedList<TreeNode>();
+//        if(root == null){
+//            return result;
+//        }
+//        TreeNode cur = root;
+//        while(!stack.isEmpty() || cur != null){
+//            if(cur != null){
+//                stack.push(cur);
+//                cur = cur.left;
+//            }else{
+//                cur = stack.pop();
+//                result.add(cur.val);
+//                cur = cur.right;
+//            }
+//        }
+//        return result;
+//    }
+//    
+	
+    //recursive traverse
+	public List<Integer> inorderTraversal(TreeNode root) {
+		List<Integer> result = new ArrayList<Integer>();
+		helper(result, root);
+		return result;
+	}
+
+	private void helper(List<Integer> result, TreeNode root) {
+		if(root == null){
+			return;
+		}
+		helper(result, root.left);
+		result.add(root.val);
+		helper(result, root.right);
+	}
 }

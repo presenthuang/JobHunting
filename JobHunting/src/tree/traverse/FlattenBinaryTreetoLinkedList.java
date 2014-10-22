@@ -1,7 +1,6 @@
 package tree.traverse;
 
 import java.util.Stack;
-
 import utils.TreeNode;
 
 public class FlattenBinaryTreetoLinkedList {

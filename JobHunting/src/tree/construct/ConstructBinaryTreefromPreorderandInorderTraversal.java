@@ -33,14 +33,14 @@ public class ConstructBinaryTreefromPreorderandInorderTraversal {
 			}
 		}
 		//length of left tree is k - (instart + 1)
-		
+		int leftLength = k - instart;
 		//root left would be from preorder second to k - instart element
 		//and be from inorder first to k - 1 element
-		root.left = helper(preorder, prestart + 1, prestart + k - instart, inorder, instart, k - 1);
+		root.left = helper(preorder, prestart + 1, prestart + leftLength, inorder, instart, k - 1);
 		//root right would be from preorder k - instart + 1 to end 
 		//and be from inorder k + 1 to inend
-		root.right = helper(preorder, prestart + k - instart + 1, preend, inorder, k + 1, inend);
+		root.right = helper(preorder, prestart + leftLength + 1, preend, inorder, k + 1, inend);
 
-		return null;
+		return root;
 	}
 }

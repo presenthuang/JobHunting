@@ -32,14 +32,11 @@ public class ConstructBinaryTreefromInorderandPostorderTraversal {
 				break;
 			}
 		}
+		int leftLength = k  - instart;
 		//Becuase k is not the length, it it need to -( inStart + 1 ) to get the length
-		System.out.println("in left: " + instart);
-		System.out.println("in right: " + (k - 1));
-		System.out.println("post left: " + poststart);
-		System.out.println("post right: " + (poststart + k - (instart + 1)));
-		root.left = helper(inorder, postorder, instart, k - 1, poststart, poststart + k - (instart + 1));
+		root.left = helper(inorder, postorder, instart, k - 1, poststart, poststart + leftLength - 1);
 		// postStart+k-inStart = postStart+k-(inStart+1) +1
-		root.right = helper(inorder, postorder, k + 1, inend, poststart + k - instart, postend - 1);
+		root.right = helper(inorder, postorder, k + 1, inend, poststart + leftLength, postend - 1);
 		return root;
 	}
 	
