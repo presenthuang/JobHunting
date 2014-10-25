@@ -25,7 +25,7 @@ public class NextPermutation {
         if(num == null)
         	return;
      // Find longest non-increasing suffix
-        int i = num.length;
+        int i = num.length - 1;
         while(i > 0 && num[i-1] >= num[i]){//from right to left, increasing order.
         	i--;
         }

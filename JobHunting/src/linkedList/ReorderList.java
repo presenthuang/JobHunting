@@ -18,19 +18,21 @@ public class ReorderList {
 			return;
 		ListNode fast = head;
 		ListNode slow = head;
+		//first we should find the middle of this linkedlist using two pointers.
 		while (fast.next != null && fast.next.next != null) {
 			fast = fast.next.next;
 			slow = slow.next;
 		}
 		ListNode q = slow.next;
+		//We need to reverse from the slow.next to the end of the list.
 		while (q.next != null) {
 			ListNode temp = slow.next;
 			slow.next = q.next;
 			q.next = q.next.next;
 			slow.next.next = temp;
 		}
-
 		q = head;
+		// then start from the head and the mid+1, iteratively through all the nodes and combine them.
 		while (slow != q && slow.next != null) {
 			ListNode temp = q.next;
 			q.next = slow.next;
@@ -38,6 +40,5 @@ public class ReorderList {
 			q.next.next = temp;
 			q = q.next.next;
 		}
-
 	}
 }

@@ -334,6 +334,7 @@ public class _Practise {
 	}
 	
 	public static void main(String args[]){
+		Integer.parseInt("23");
 		System.out.println(Integer.MAX_VALUE);
 		int in = 1;
 		byte term = (byte)0x0a;
@@ -341,6 +342,7 @@ public class _Practise {
 		double bit = 130.4;
 		byte name = (byte) bit;
 		long i1 = -1 >>> 2000;
+		String [] leStrings;
 		System.out.println(i1);
 		_Practise p = new _Practise();
 		int [] num = {1, 12, 5, 26, 7, 14, 3, 7, 2};

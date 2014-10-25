@@ -48,5 +48,13 @@ public class Subsets {
 		helper(S,cur+1,result,pile);
 	}
     
-    
+    public static void main(String[] args) {
+		int[] list = {1,2,3};
+		List<List<Integer>> result = new Subsets().subsets(list);
+//		for(List<Integer> l : result){
+//			for(Integer i : l){
+//				System.out.print(i);
+//			}
+//		}
+	}
 }

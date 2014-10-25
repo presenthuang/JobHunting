@@ -26,18 +26,18 @@ public class CopyListwithRandomPointer {
     	RandomListNode p = newhead;
     	RandomListNode q = head;
     	while(q.next != null || q.random != null){
-    		if(q.random != null){
+    		if(q.random != null){//insert in the node that has a random pointer.
     			if(labels.containsKey(q.random.label)){
-    				p.random = labels.get(q.random.label);
-    			}else{
+    				p.random = labels.get(q.random.label);//if the node has already exist in the hashmap.
+    			}else{//if not exist, just add the new node into the table.
     				RandomListNode temp = new RandomListNode(q.random.label);
     				p.random = temp;
     				labels.put(q.random.label, temp);
     			}
     		}
-    		if(q.next != null){
+    		if(q.next != null){//add next node in the list.
         		if(labels.containsKey(q.next.label)){
-        			p.next = labels.get(q.next.label);
+        			p.next = labels.get(q.next.label);//already exist.
         		}else{
         			RandomListNode temp = new RandomListNode(q.next.label);
         			p.next = temp;
@@ -47,7 +47,7 @@ public class CopyListwithRandomPointer {
     		if(q.next != null){
         		p = p.next;
         		q = q.next;
-    		}else{
+    		}else{//finished construction.
     		    break;
     		}
     	}

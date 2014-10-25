@@ -11,26 +11,24 @@ public class MaximumProductSubarray {
     	if(length < 1){
     		return 0;
     	}
-    	int r = A[0];
-    	int max_p = A[0];
-    	int min_p = A[0];
+    	int result = A[0];
+    	int max = A[0];
+    	int min = A[0];
     	
     	for(int i = 1; i < length; ++i){
-    		int temp_max = max_p * A[i];
-    		int temp_min = min_p * A[i];
     		int current = A[i];
-    		max_p = Math.max(Math.max(temp_max, temp_min), current);
-    		min_p = Math.min(Math.min(temp_max, temp_min), current);
-    		if(max_p > r)
-    			r = max_p;
+    		int temp_max = max * current;
+    		int temp_min = min * current;
+    		max = Math.max(Math.max(temp_max, temp_min), current);//compare with three value: max * cur, min * cur, cur
+    		min = Math.min(Math.min(temp_max, temp_min), current);//compare with three value: max * cur, min * cur, cur
+    		if(max > result)//update current max value.
+    			result = max;
     	}
-    	return r;
+    	return result;
     }
-    
     public static void main(String[] args) {
 		int [] A = {-2,3,-2,-4};
 		MaximumProductSubarray ma = new MaximumProductSubarray();
 		System.out.println(ma.maxProduct(A));
 	}
-
 }

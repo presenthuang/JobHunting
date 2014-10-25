@@ -10,29 +10,29 @@ public class RecoverBinarySearchTree {
 //Note:
 //A solution using O(n) space is pretty straight forward. 
 //Could you devise a constant space solution?
-    TreeNode p,q;
-    TreeNode pre;
+    TreeNode firstNode,secondNode;
+    TreeNode preNode;
     public void recoverTree(TreeNode root) {
         if(root == null)
         	return;
-        getwrong(root);
-        int tmp = p.val;
-        p.val = q.val;
-        q.val = tmp;
+        inorder(root);
+        int temp = firstNode.val;
+        firstNode.val = secondNode.val;
+        secondNode.val = temp;
     }
-	private void getwrong(TreeNode root) {
+	private void inorder(TreeNode root) {
 		if(root == null)
 			return;
-		getwrong(root.left);
-		if(pre != null && root.val < pre.val){
-		    if(p == null){
-			p = pre;
-			q = root;
+		inorder(root.left);
+		if(preNode != null && root.val < preNode.val){
+		    if(firstNode == null){
+			firstNode = preNode;
+			secondNode = root;
     		}else{
-    			q = root;
+    			secondNode = root;
     		}
 		}
-		pre = root;
-		getwrong(root.right);
+		preNode = root;
+		inorder(root.right);
 	}
 }
