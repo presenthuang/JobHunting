@@ -349,7 +349,9 @@ public class _Practise {
 		for(int i = 0; i < num.length; ++i)
 			System.out.print(num[i]+" ");
 //		System.out.println(p.longestCommonSubsequence("ABCBDAB", "BDCABA"));
-		
+		System.out.println("char");
+		String myString = String.valueOf((char)0);
+		System.out.println(myString);
 		int begin = 3;
 		int end = -4;
 		
