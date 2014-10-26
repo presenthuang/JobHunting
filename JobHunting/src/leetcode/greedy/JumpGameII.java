@@ -18,7 +18,8 @@ public class JumpGameII {
     public int jump(int[] A) {
         int curMax = 0, nexMax = 0, ans = 0;
         for(int i = 0; i < A.length; ++i){
-        	if(i > curMax){
+        	if(i > curMax){//every time we need to record that how far we could jump from this position. 
+        					//Only when we cannot exceed this position do we need to update the max
         		curMax = nexMax;
         		ans++;
         	}

@@ -30,12 +30,13 @@ public class BinaryTreeMaximumPathSum {
     public int helper(TreeNode node){
     	if(node == null)
     		return 0;
+    	// recursively get sum of left and right path
     	int left = Math.max(helper(node.left), 0);
     	int right = Math.max(helper(node.right), 0);
     	int nval = node.val;
-    	
+    	//update maximum here
     	max = Math.max(nval+left+right, max);
-    	
+    	// return sum of largest path of current node
     	return node.val + Math.max(left, right);
     }
 }

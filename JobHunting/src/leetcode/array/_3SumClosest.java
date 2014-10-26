@@ -14,33 +14,30 @@ public class _3SumClosest {
 	//
 	// The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 	// ================================================================== //
-	public int threeSumClosest(int[] num, int target) {
-		Arrays.sort(num);
-		int gap = Integer.MAX_VALUE;
-		int returnval = gap;
-		for (int i = 0; i < num.length - 2; ++i) {
-			if (i != 0 && num[i - 1] == num[i])
-				continue;
-			int j = i + 1;
-			int k = num.length - 1;
-			int num1, num2, num3;
-			num1 = num[i];
-			while (j < k) {
-				num2 = num[j];
-				num3 = num[k];
-				int total = num1 + num2 + num3;
-				int newGap = Math.abs(total - target); 
-				if (newGap < gap) {
-					returnval = total;
-				}
-				gap = newGap < gap ? newGap : gap;
-				if (total - target < 0) {
-					j++;
-				} else {
-					k--;
-				}
-			}
-		}
-		return returnval;
-	}
+    public int threeSumClosest(int[] num, int target) {
+        if(num.length < 3){
+            return 0;
+        }
+        Arrays.sort(num);
+        int gap = Integer.MAX_VALUE;
+        int returnval = Integer.MAX_VALUE;
+        for(int i = 0; i < num.length - 2; ++i){
+            int j = i + 1;
+            int k = num.length - 1;
+            while(j < k){
+                int result = num[i] + num[j] + num[k];
+                int newGap = Math.abs(target-result);
+                if(newGap < gap){
+                    gap = newGap;
+                    returnval = result;
+                }
+                if(result - target < 0){
+                    j++;
+                }else{
+                    k--;
+                }
+            }
+        }
+        return returnval;        
+    }
 }

@@ -24,26 +24,24 @@ public class PathSumII {
 //	]
 	
 //	simple dfs method
-	 public List<List<Integer>> pathSum(TreeNode root, int sum) {
-	        List<List<Integer>> results = new ArrayList<List<Integer>>();
-	        if(root == null || (root.left == null && root.right == null && root.val != sum))
-	        	return results;
-	        helper(results, root, sum, new ArrayList<Integer>(), 0);
-	        return results;
-	 }
-
-	private void helper(List<List<Integer>> results, TreeNode root, int sum, ArrayList<Integer> result, int current) {
-		if(root == null)
-			return;
-		if(root.left == null && root.right == null){//get to a leaf, need to verify
-			if(current + root.val == sum){
-				result.add(root.val);
-				results.add(new ArrayList<>(result));
-			}
-			return;
-		}
-		result.add(root.val);
-		helper(results, root.left, sum, new ArrayList<Integer>(result), current+root.val);
-		helper(results, root.right, sum, new ArrayList<Integer>(result), current+root.val);
-	}
+    public List<List<Integer>> pathSum(TreeNode root, int sum) {
+        List<List<Integer>> results = new ArrayList<List<Integer>>();
+        helper(results, root, sum, new ArrayList<Integer>());
+        return results;
+    }
+    
+    private void helper(List<List<Integer>> results, TreeNode root, int remain, List<Integer> current){
+        if(root == null){
+            return;
+        }
+        current.add(root.val);
+        remain -= root.val;
+        if(root.left == null && root.right == null && remain == 0){//leaf node
+            results.add(new ArrayList<Integer>(current));
+        }else{
+            helper(results, root.left, remain, current);
+            helper(results, root.right, remain, current);
+        }
+        current.remove(current.size()-1);    
+    }
 }
