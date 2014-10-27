@@ -1,6 +1,6 @@
 package basic;
 
-public class Quicksort {
+public class QuickSort {
 
 	public void quicksort(int[] num, int i, int j) {
 		if (i < j) {
@@ -21,21 +21,21 @@ public class Quicksort {
 											// the elements that are smaller
 											// than the pivot.
 			if (num[i] <= pivotVal) {
-				int temp = num[i];// swap array[i] and array[returnIndex]
+				int temp = num[i];// swap num[i] and num[returnIndex]
 				num[i] = num[returnIndex];
 				num[returnIndex] = temp;
 				returnIndex++;
 			}
 		}
 		num[right] = num[returnIndex];// returnIndex should be the correct index
-										// for pivot, swap array[right] and
-										// array[returnIndex]
+										// for pivot, swap num[right] and
+										// num[returnIndex]
 		num[returnIndex] = pivotVal;
 		return returnIndex;
 	}
 	public static void main(String[] args) {
 		int[] num = {1, 2, 2, 3, 3, 3, 4, 5, 5, 7, 8, 56};
-		new Quicksort().quicksort(num, 0, num.length-1);
+		new QuickSort().quicksort(num, 0, num.length-1);
 		for(int i = 0; i < num.length; ++i){
 			System.out.print(num[i] + " ");
 		}

@@ -32,13 +32,13 @@ public class RecursionandDynamicProgramming9_03 {
 		if(mid == midValue){
 			return mid;
 		}else if(midValue > mid){
-			int leftIndex = Math.min(mid-1, midValue);
-			int left = magicFastDup(array,start,leftIndex);
+			end = Math.min(mid-1, midValue);
+			int left = magicFastDup(array,start,end);
 			if(left >= 0)
 				return left;
 		}else{
-			int rightIndex = Math.max(mid+1, midValue);
-			int right = magicFastDup(array,rightIndex,end);
+			start = Math.max(mid+1, midValue);
+			int right = magicFastDup(array,start,end);
 			if(right >= 0)
 				return right;
 		}

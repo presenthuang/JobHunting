@@ -1,4 +1,4 @@
-package leetcode.string;
+package leetcode.greedy;
 
 public class LongestSubstringWithoutRepeatingCharacters {
 //	Given a string, find the length of the longest substring without repeating characters. 

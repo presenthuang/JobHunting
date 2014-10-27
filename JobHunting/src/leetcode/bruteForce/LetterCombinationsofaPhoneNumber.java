@@ -1,4 +1,4 @@
-package leetcode.string;
+package leetcode.bruteForce;
 
 import java.util.ArrayList;
 import java.util.List;
