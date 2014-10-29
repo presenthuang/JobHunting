@@ -25,7 +25,7 @@ public class MergeIntervals {
         for(int i = 0; i < intervals.size(); ++i){//require that this intervals are in a increasing order? No.
         	Interval cur = intervals.get(i);
         	nocommon = true;
-        	for(int j = i+1; i < intervals.size(); ++j){
+        	for(int j = i+1; j < intervals.size(); ++j){
         		Interval inlist = intervals.get(j);
         		if(overlapped(cur,inlist)){
         			Interval temp = new Interval(Math.min(cur.start, inlist.start), Math.max(cur.end, inlist.end));

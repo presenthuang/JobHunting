@@ -14,8 +14,6 @@ public class Anagrams {
     public List<String> anagrams(String[] strs) {
         HashMap<String, ArrayList<String>> stored = new HashMap<>();
         List<String> result = new ArrayList<String>();
-        
-        
         for(String cur : strs){
         	String key = sortStr(cur);
         	if(stored.containsKey(key)){
@@ -28,8 +26,6 @@ public class Anagrams {
         		stored.put(key, same);
         	}
         }
-        
-        
         for(String key : stored.keySet()){
         	ArrayList<String> list = stored.get(key);
         	if(list.size() > 1){
@@ -41,11 +37,8 @@ public class Anagrams {
 
 	private String sortStr(String cur) {
 		char [] array = cur.toCharArray();
-		
 		Arrays.sort(array);
-		
 		String result = new String(array);
-		
 		return result;
 	}
 }

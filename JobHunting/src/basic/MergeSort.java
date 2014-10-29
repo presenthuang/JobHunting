@@ -5,6 +5,7 @@ public class MergeSort {
 		int[] helper = new int[array.length];
 		mergesort(array, helper, 0, array.length - 1);
 	}
+	
 	public static void mergesort(int[] array, int[] helper, int low, int high) {
 		if (low < high) {
 			int middle = (low + high) / 2;
@@ -13,16 +14,14 @@ public class MergeSort {
 			merge(array, helper, low, middle, high); // Merge them
 		}
 	}
-	public static void merge(int[] array, int[] helper, int low, int middle,
-			int high) {
-
+	
+	public static void merge(int[] array, int[] helper, int low, int middle, int high) {
 		for (int i = low; i <= high; i++) { // copy to helper array
 			helper[i] = array[i];
 		}
 		int helperLeft = low;
 		int helperRight = middle + 1;
 		int current = low;
-
 		// Iterate through helper array. Copy them back to the original array.
 		while (helperLeft <= middle && helperRight <= high) {
 			if (helper[helperLeft] <= helper[helperRight]) {
