@@ -1,4 +1,4 @@
-package leetcode.general;
+package interviewQuestions;
 
 public class CachedFib {
 	int max = 100000;
