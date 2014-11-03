@@ -1,4 +1,4 @@
-package interviewQuestions;
+package basic;
 
 public class CachedFib {
 	int max = 100000;

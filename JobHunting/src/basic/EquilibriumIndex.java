@@ -1,4 +1,4 @@
-package interviewQuestions;
+package basic;
 
 public class EquilibriumIndex {
 //	Equilibrium index of an array is an index such that the sum of elements at 
