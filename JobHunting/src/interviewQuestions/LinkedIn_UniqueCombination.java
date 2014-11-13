@@ -2,12 +2,13 @@ package interviewQuestions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+
 //
 //14. 题目描述起来很简单，就是给出一个数，找出所有Unique的组合。 
 //比如： 
 //2:    1＋1
 //3:    1＋2，　1＋1＋1　 
-//4:    1＋3，　1＋2，　1＋1＋1＋1，　2＋2
+//4:    1＋3，　1＋1＋2，　1＋1＋1＋1，　2＋2
 
 public class LinkedIn_UniqueCombination {
 	public static void countUnique(int n, ArrayList<ArrayList<Integer>> result) {

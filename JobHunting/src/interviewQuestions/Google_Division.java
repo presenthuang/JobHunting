@@ -18,7 +18,6 @@ public class Google_Division {
 //
 //	etc..
 	
-	
 	//problem when coping with the part iterate thing.
 	public String divide(int a, int b){
 		return null;

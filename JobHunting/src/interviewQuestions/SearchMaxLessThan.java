@@ -1,4 +1,4 @@
-package basic;
+package interviewQuestions;
 
 public class SearchMaxLessThan {
 

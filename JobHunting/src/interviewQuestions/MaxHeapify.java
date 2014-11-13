@@ -7,7 +7,6 @@ public class MaxHeapify {
 		for (int i = 0; i < arr.length; i++)
 			System.out.print(arr[i] + " ");
 		System.out.println();
-
 		buildMaxHeap(arr);
 		for (int i = 0; i < arr.length; i++)
 			System.out.print(arr[i] + " ");
@@ -19,7 +18,9 @@ public class MaxHeapify {
 	}
 
 	public static void maxHeapify(int[] arr, int i) {
-		int left = 2 * i + 1;//left = 2i + 1   //for a heap, the array must be level order full tree, so 2i+1 would be the left child and 2i+2 would be the right child
+//		for a heap, the array must be level order full tree, 
+//		so 2i+1 would be the left child and 2i+2 would be the right child
+		int left = 2 * i + 1;//left = 2i + 1   
 		int right = 2 * i + 2;//right = 2i + 2
 		int largest = i;//largest = i
 

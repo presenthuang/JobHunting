@@ -2,8 +2,8 @@ package leetcode.bruteForce;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
-import java.util.Stack;
 
 public class Subsets {
 //	Given a set of distinct integers, S, return all possible subsets.
@@ -31,12 +31,12 @@ public class Subsets {
         if(S == null)
         	return result;
     	Arrays.sort(S);
-    	Stack<Integer> pile = new Stack<Integer>();
+    	LinkedList<Integer> pile = new LinkedList<Integer>();
         helper(S,0,result,pile);
         return result;
     }
 
-	private void helper(int[] S, int cur, List<List<Integer>> result, Stack<Integer> pile) {
+	private void helper(int[] S, int cur, List<List<Integer>> result, LinkedList<Integer> pile) {
 		if(cur == S.length){
 			List<Integer> temp = new ArrayList<Integer>(pile);
 			result.add(temp);

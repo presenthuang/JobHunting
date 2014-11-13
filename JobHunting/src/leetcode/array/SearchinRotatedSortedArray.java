@@ -23,14 +23,14 @@ public class SearchinRotatedSortedArray {
     		if(A[mid] == target){
     			return mid;
     		}else{
-    			if(A[begin] <= A[mid]){//This means the left part is in correct order.
+    			if(A[begin] <= A[mid]){//This means the left part is in correct order. Turning point at right
     				if(A[begin] <= target && target <= A[mid]){//if target is in the left part.
     					end = mid - 1;
     				}else{//target is in the right part.
     					begin = mid + 1;
     				}
-    			}else{//This means left is not in correct order, we have to find it in the whole part.
-    				if(A[mid] >= target || target >= A[begin]){//This is going to be out of the bounds in [begin, mid]
+    			}else{//This means right part is in correct order, Turning point at left.
+    				if(A[mid] >= target || target >= A[begin]){//This is going to be out of the bounds in [mid, begin]
     					end = mid - 1;
     				}else{//then it must in the right part.
     					begin = mid + 1;

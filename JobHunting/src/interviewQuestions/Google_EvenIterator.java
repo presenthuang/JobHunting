@@ -50,7 +50,7 @@ public class Google_EvenIterator implements Iterator<Integer> {
 
 	public static void main(String[] args) {
 		// even number: 2 6
-		ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6,7,11,13,15,17,19,21,22));
+		ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 11, 13, 15, 17, 19, 21, 22));
 		Google_EvenIterator evenIterator = new Google_EvenIterator(list.iterator());
 		
 		while (evenIterator.hasNext()) {

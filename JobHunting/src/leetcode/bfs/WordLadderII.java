@@ -99,7 +99,8 @@ public class WordLadderII {
     	   }
     	   return res;
     	}
-    private void getPaths(String cur, String end, ArrayList<String> list, int level, Map<String, List<String>> nextMap, ArrayList<ArrayList<String>> res) {
+    private void getPaths(String cur, String end, ArrayList<String> list, int level, 
+    		Map<String, List<String>> nextMap, ArrayList<ArrayList<String>> res) {
     	   if(cur.equals(end)){
     	      res.add(new ArrayList<String>(list));
     	   }
@@ -111,5 +112,5 @@ public class WordLadderII {
     	         list.remove(list.size() - 1);
     	      }
     	   }
-}
+    }
 }

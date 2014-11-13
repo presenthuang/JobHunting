@@ -5,25 +5,25 @@ import utils.ListNode;
 public class InsertionSortList {
 //	Sort a linked list using insertion sort.
 	
-	
 //	http://blog.csdn.net/linhuanmars/article/details/21144553
     public ListNode insertionSortList(ListNode head) {
         if(head == null || head.next == null){
             return head;
         }
-        ListNode helper = new ListNode(0);
-        ListNode pre = helper;
+        ListNode fakeNode = new ListNode(0);
         ListNode cur = head;
+        ListNode p = fakeNode;
         while(cur != null){
             ListNode next = cur.next;
-            pre = helper;
-            while(pre.next != null && pre.next.val <= cur.val){
-                pre = pre.next;
+            p = fakeNode;
+            while(p.next != null && p.next.val <= cur.val){
+                p = p.next;
             }
-            cur.next = pre.next;
-            pre.next = cur;
+            cur.next = p.next;
+            p.next = cur;
             cur = next;
         }
-        return helper.next;
+        return fakeNode.next;
+        
     }
 }

@@ -5,21 +5,24 @@ public class Amazon_ArrayRotation {
 	
 	void leftRotate(int[] array, int d, int n){
 		int index = 0;
+		//first we need to find the pos that the array would start to rotate
 		for(int i = 0; i < n; ++i){
 			if(array[i] == d){
 				index = i;
 				break;
 			}
 		}
+		//reverse from 0 to element d
 		int left = 0;
 		int right = index;
-		while(left < right){//swap the value from 0 to the end of index
+		while(left < right){
 			int temp = array[left];
 			array[left] = array[right];
 			array[right] = temp;
 			left++;
 			right--;
 		}
+		//reverse from element d to end of list.
 		left = index+1;
 		right = n-1;
 		while(left < right){
@@ -29,7 +32,7 @@ public class Amazon_ArrayRotation {
 			left++;
 			right--; 
 		}
-		
+		//reverse the whole list
 		left = 0;
 		right = n-1;
 		while(left < right){
@@ -43,8 +46,8 @@ public class Amazon_ArrayRotation {
 	
 	public static void main(String[] args) {
 		Amazon_ArrayRotation arr = new Amazon_ArrayRotation();
-		int [] array = {1,2,3,4,5};
-		arr.leftRotate(array, 3, 5);
+		int [] array = {1,2,3,4,5,6,7};
+		arr.leftRotate(array, 3, 7);
 		for(int i = 0; i < array.length; ++i)
 			System.out.print(array[i] + " ");
 	}

@@ -1,4 +1,4 @@
-package basic;
+package interviewQuestions;
 
 public class Hanoi {
 	public static String HanoiT(int nDisks, int fromPeg, int toPeg){
