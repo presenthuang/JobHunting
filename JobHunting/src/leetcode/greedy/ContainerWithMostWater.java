@@ -21,6 +21,7 @@ public class ContainerWithMostWater {
                     r--;
                 }
             }
+            System.out.println(max);
         }
         return max;
     }

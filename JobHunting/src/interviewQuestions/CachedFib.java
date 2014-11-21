@@ -15,9 +15,7 @@ public class CachedFib {
 		return fib[i];
 	}
 	
-	
 	public static void main(String[] args) {
-		CachedFib cf = new CachedFib();
-		System.out.println(cf.fibonacci(8));
+		System.out.println(new CachedFib().fibonacci(8));
 	}
 }

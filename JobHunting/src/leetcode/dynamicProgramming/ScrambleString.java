@@ -90,8 +90,8 @@ public class ScrambleString {
         		for(int j = L - k; j >= 0; --j){
         			boolean canScramble = false;
         			for(int m = 1; m < k; ++m){
-        				canScramble = (scramble[m - 1][i][j] && scramble[k - m - 1][i + m][j + m]) 
-        						|| (scramble[m - 1][i][j + k -m] && scramble[k - m - 1][i + m][j]);
+        				canScramble = (scramble[m-1][i][j] && scramble[k-m-1][i+m][j+m]) 
+        						|| (scramble[m-1][i][j+k-m] && scramble[k-m-1][i+m][j]);
         				if(canScramble)
         					break;
         			}

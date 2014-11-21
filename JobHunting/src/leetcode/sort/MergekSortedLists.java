@@ -2,21 +2,12 @@ package leetcode.sort;
 
 import java.util.List;
 
+import utils.ListNode;
+
 public class MergekSortedLists {
 //	Merge k sorted linked lists and return it as one sorted list. 
 //	Analyze and describe its complexity.
 
-	/**
-     * Definition for singly-linked list.
-     */
-      class ListNode {
-          int val;
-          ListNode next;
-          ListNode(int x) {
-              val = x;
-              next = null;
-          }
-      }
     public ListNode mergeKLists(List<ListNode> lists) {
     	ListNode new_list = null;
         for(ListNode list : lists){

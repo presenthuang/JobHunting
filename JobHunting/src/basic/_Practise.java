@@ -1,11 +1,29 @@
 package basic;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Hashtable;
 
+import utils.LinkedListNode;
+
 public class _Practise {
 	
+	static LinkedListNode removeAll(int val, LinkedListNode list) {
+        if(list == null){
+        	return list;
+        }
+        LinkedListNode head = new LinkedListNode(0);
+        head.next = list;
+        LinkedListNode p = head;
+        while(p != null && p.next != null){
+        	if(p.next.val == val){
+        		p.next = p.next.next;
+        	}
+        	p = p.next;
+        }
+        return head.next;
+    }
 	static int findnum(int length){
 		int total_sum = 0;
 		for(int i = 1; i < length; ++i){
@@ -333,7 +351,21 @@ public class _Practise {
 		return LCS[m][n];
 	}
 	
+    public boolean isScramble(String s1, String s2) {
+        char[] c1 = s1.toCharArray();
+        char[] c2 = s2.toCharArray();
+        Arrays.sort(c1);
+        Arrays.sort(c2);
+        String r1 = new String(c1);
+        String r2 = new String(c2);
+        if(r1.equals(r2)){
+            return true;
+        }
+        return false;
+    }
+    
 	public static void main(String args[]){
+		System.out.println(new _Practise().isScramble("a", "a"));
 		Integer.parseInt("23");
 		System.out.println(Integer.MAX_VALUE);
 		int in = 1;

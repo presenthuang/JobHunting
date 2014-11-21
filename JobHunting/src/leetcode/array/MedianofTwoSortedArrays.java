@@ -38,6 +38,5 @@ public class MedianofTwoSortedArrays {
             aStart = meda + 1;
         }
         return findkthElement(A, B, k, aStart, aEnd, bStart, bEnd);
-        
     }
 }
