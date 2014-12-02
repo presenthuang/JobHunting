@@ -11,6 +11,7 @@ public class TreesandGraphs4_07 {
 			return null;
 		if(root == p || root == q)
 			return root;
+		
 		TreeNode temp_left = commonAncestor(root.left, p, q);
 		TreeNode temp_right = commonAncestor(root.right, p, q);
 		

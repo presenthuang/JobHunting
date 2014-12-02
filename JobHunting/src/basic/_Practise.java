@@ -365,54 +365,7 @@ public class _Practise {
     }
     
 	public static void main(String args[]){
-		System.out.println(new _Practise().isScramble("a", "a"));
-		Integer.parseInt("23");
-		System.out.println(Integer.MAX_VALUE);
-		int in = 1;
-		byte term = (byte)0x0a;
-		StringBuilder sb = new StringBuilder();
-		double bit = 130.4;
-		byte name = (byte) bit;
-		long i1 = -1 >>> 2000;
-		String [] leStrings;
-		System.out.println(i1);
-		_Practise p = new _Practise();
-		int [] num = {1, 12, 5, 26, 7, 14, 3, 7, 2};
-		for(int i = 0; i < num.length; ++i)
-			System.out.print(num[i]+" ");
-//		System.out.println(p.longestCommonSubsequence("ABCBDAB", "BDCABA"));
-		System.out.println("char");
-		String myString = String.valueOf((char)0);
-		System.out.println(myString);
-		int begin = 3;
-		int end = -4;
 		
-//		System.out.println((begin & end) + ((begin ^ end) >> 1));
-//		System.out.println((begin+end)/2);
-//		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
-//		map.put(2, 5);
-//		map.put(0, 2);
-		
-//		HashMap<Integer, Integer> map1 = new HashMap<Integer, Integer>();
-//		map1.put(0, 2);
-//		map1.put(2, 5);
-		
-		HashSet<Integer> Set = new HashSet<Integer>();
-		HashMap<String, String> result = new HashMap<>();
-		result.put(null, "temp");
-		System.out.println(result.get(null));
-//		if(Set.contains(map1)){
-//			System.out.println();
-//		}
-//		map.equals(map1);
-//		System.out.println(map);
-//		System.out.println(map1);
-//		System.out.println("231".substring(3,3));
-//		
-//		System.out.println(Integer.toBinaryString(~(0)+1));
-		
-		
-//		System.out.println(p.minCut("aabb"));
 	}
 	
 }

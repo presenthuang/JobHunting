@@ -18,13 +18,12 @@ public class ReverseLinkedListII {
 	// 1 ≤ m ≤ n ≤ length of list.
 	// ================================================================== //
     public ListNode reverseBetween(ListNode head, int m, int n) {
-        if(head == null || m > n){
+        if(head == null)
             return head;
-        }
         ListNode dummy = new ListNode(0);
         dummy.next = head;
         ListNode begin = dummy;
-        for(int i = 0; i < m-1; ++i){
+        for(int i = 1; i < m; ++i){
             begin = begin.next;
             if(begin == null || begin.next == null){
                 return head;
