@@ -12,31 +12,39 @@ public class StringtoInteger_atoi_ {
 	
 //	Considering for the different situation: space/sign/exceed the maximum value of integer
     public int atoi(String str) {
-    	long result = 0;
-    	boolean flag = false;
+    	int result = 0;
+    	boolean neg = false;
     	if(str == null || str.length() == 0)
-    		return (int)result;
+    		return result;
     	int length = str.length();
     	int start = 0;
-    	while(str.charAt(start) == ' '){//if the previous is not a integer.
+    	while(str.charAt(start) == ' '){//if the head is not a integer.
     		start++;
     	}
     	if(str.charAt(start) == '-'){//if the integer is negative
-    		flag = true;
+    		neg = true;
     		start++;
     	}else if(str.charAt(start) == '+'){
     	    start++;
     	}
     	for(int i = start; i < length; ++i){
-    		if(result >= Integer.MAX_VALUE){//if the result is greater than the scope of Integer
-    			break;
-    		}
     		int digit = str.charAt(i)-'0';
-    		if(digit > 9 || digit < 0)//if the digit is not belongs to an digit
+    		if(digit > 9 || digit < 0)//if the digit is not belongs to an digit, just break and return current result.
     			break;
+    		if(result > Integer.MAX_VALUE / 10 
+    				|| (!neg && result == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10) 
+    				|| (neg && result == Integer.MAX_VALUE / 10 && digit > -(Integer.MIN_VALUE % 10))){
+    			if(neg){
+    				return Integer.MIN_VALUE;
+    			}else{
+    				return Integer.MAX_VALUE;
+    			}
+    		}
     		result = result * 10 + digit;
     	}
-    	return flag? -(int)result:(int)result;
+    	return neg? -result:result;
     }
-    
+    public static void main(String[] args) {
+		System.out.println(new StringtoInteger_atoi_().atoi("2147483648"));
+	}
 }

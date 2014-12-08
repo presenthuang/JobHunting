@@ -38,14 +38,12 @@ public class Google_EvenIterator implements Iterator<Integer> {
 	private void advance() {
 		while (iter.hasNext()) {
 			Integer cur = iter.next();
-			if (cur % 2 == 0) {
+			if (cur % 2 == 0) {//this is an even number for that.
 				nextEven = cur;
 				return;
-			} else {
-				nextEven = null;
 			}
 		}
-		nextEven = null; // if no further even number
+		nextEven = null; // if no further even number in the iterator list.
 	}
 
 	public static void main(String[] args) {

@@ -22,10 +22,11 @@ public class Google_MySet {
 			return;
 		}
 		int index = table.get(s);
-		table.remove(s);
-		list.set(index, list.get(list.size()-1));
-		table.put(list.get(list.size()-1), index);
+		String alter = list.get(list.size()-1);
+		list.set(index, alter);
 		list.remove(list.size()-1);
+		table.put(alter, index);
+		table.remove(s);
 	}
 	
 	public boolean contain(String s){
@@ -36,5 +37,20 @@ public class Google_MySet {
 		Random rand = new Random(System.currentTimeMillis());
 		int num = rand.nextInt(list.size());
 		return list.get(num);
+	}
+	
+	public static void main(String[] args) {
+		Google_MySet myRandomSet = new Google_MySet();
+		String st1 = "Apple";
+		String st2 = "Banana";
+		String st3 = "Cat";
+		myRandomSet.add(st1);
+		myRandomSet.add(st2);
+		myRandomSet.add(st3);
+		
+		myRandomSet.remove(st1);
+
+		System.out.println(myRandomSet.table.size());
+		System.out.println(myRandomSet.getRandom());
 	}
 }
