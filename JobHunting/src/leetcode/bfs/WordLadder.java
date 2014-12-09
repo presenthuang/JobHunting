@@ -1,6 +1,7 @@
 package leetcode.bfs;
 
 import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Set;
 
 public class WordLadder {
@@ -27,30 +28,24 @@ public class WordLadder {
     public int ladderLength(String start, String end, Set<String> dict) {
         if (dict.size() == 0)
         	return 0;
-        
-        LinkedList<String> wordQueue = new LinkedList<String>();
-        LinkedList<Integer> curLength = new LinkedList<Integer>();
-        
-        wordQueue.add(start);
-        curLength.add(1);
-        
+        Queue<String> wordQueue = new LinkedList<String>();
+        Queue<Integer> curLength = new LinkedList<Integer>();
+        wordQueue.offer(start);
+        curLength.offer(1);
         while(!wordQueue.isEmpty()){
-        	String curWord = wordQueue.pop();
-        	int curDistince = curLength.pop();
-        	
+        	String curWord = wordQueue.poll();
+        	int curDistince = curLength.poll();
         	if(curWord.equals(end)){
         		return curDistince;
         	}
-        	
         	for(int i = 0; i < curWord.length(); ++i){
         		char [] chararray = curWord.toCharArray();
-        		
         		for(char c = 'a'; c <= 'z'; ++c){
         			chararray[i] = c;
         			String newWord = new String(chararray);
         			if(dict.contains(newWord)){
-        				wordQueue.add(newWord);
-        				curLength.add(curDistince+1);
+        				wordQueue.offer(newWord);
+        				curLength.offer(curDistince+1);
         				dict.remove(newWord);
         			}
         		}

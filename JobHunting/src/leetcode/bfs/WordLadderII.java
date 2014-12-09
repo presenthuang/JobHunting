@@ -9,7 +9,8 @@ import java.util.Map;
 import java.util.Set;
 
 public class WordLadderII {
-//	Given two words (start and end), and a dictionary, find all shortest transformation sequence(s) from start to end, such that:
+//	Given two words (start and end), and a dictionary, find all shortest 
+//	transformation sequence(s) from start to end, such that:
 //
 //		Only one letter can be changed at a time
 //		Each intermediate word must exist in the dictionary
@@ -37,9 +38,9 @@ public class WordLadderII {
 		      this.str = str;
 		      this.level = level;
 		   }
-		}
+	}
     public ArrayList<ArrayList<String>> findLadders(String start, String end, Set<String> dict) {
-    	  ArrayList<ArrayList<String>> res = new ArrayList<ArrayList<String>>();
+    	   ArrayList<ArrayList<String>> res = new ArrayList<ArrayList<String>>();
     	   HashSet<String> unvisitedSet = new HashSet<String>();
     	   unvisitedSet.addAll(dict);
     	   unvisitedSet.add(start);
